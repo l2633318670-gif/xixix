@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://machlink.cn/sitemap.xml
+Sitemap: https://machlinkchina.cc.cd/sitemap.xml
