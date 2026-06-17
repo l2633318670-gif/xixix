@@ -5,7 +5,7 @@
 // This is the ONLY place you need to change it.
 // =============================================
 (function () {
-  var GA_ID = 'G-XXXXXXXXXX';
+  var GA_ID = 'G-2FRYG84LK1';
   if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') {
     // Placeholder not yet configured — skip loading to avoid bad data.
     return;
