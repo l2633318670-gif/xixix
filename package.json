@@ -1,0 +1,13 @@
+{
+  "name": "machlink-china",
+  "version": "1.0.0",
+  "description": "MachLink China - used milling machine export static site",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o dist/tailwind.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i src/input.css -o dist/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}
