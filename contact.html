@@ -133,7 +133,7 @@
           <p class="text-sm text-green-100">Your message is ready. Complete it in WhatsApp.</p>
         </div>
 
-        <div id="contactForm" class="space-y-4">
+        <form id="contactForm" class="space-y-4" onsubmit="submitContactForm(event)">
           <div>
             <label class="block text-slate-400 text-xs font-medium mb-1 uppercase tracking-wide">Your Name *</label>
             <input type="text" name="name" placeholder="e.g. Mohammed Al-Rashid" class="form-input" required/>
@@ -177,11 +177,11 @@
             <label class="block text-slate-400 text-xs font-medium mb-1 uppercase tracking-wide">Your Message *</label>
             <textarea name="message" rows="4" placeholder="Tell us: machine model, year, budget, quantity, any specific requirements..." class="form-input resize-none" required></textarea>
           </div>
-          <button type="button" onclick="submitContactForm()" class="orange-btn w-full py-4 rounded-xl text-lg">
+          <button type="submit" class="orange-btn w-full py-4 rounded-xl text-lg">
             📲 Get Video + Price on WhatsApp
           </button>
           <p class="text-xs text-slate-500 text-center">Clicking above opens WhatsApp with your message pre-filled.</p>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -250,7 +250,8 @@
 
 <script src="script.js"></script>
 <script>
-function submitContactForm() {
+function submitContactForm(event) {
+  if (event) event.preventDefault();
   const name = document.querySelector('[name="name"]')?.value?.trim() || '';
   const country = document.querySelector('[name="country"]')?.value || '';
   const machineType = document.querySelector('[name="machineType"]')?.value || '';
