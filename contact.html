@@ -3,26 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<script src="analytics.js"></script>
 <title>Contact MachLink China | Buy Used Milling Machine from China</title>
 <meta name="description" content="Contact MachLink China to buy used milling machines. WhatsApp, email, or contact form. We reply within 24 hours. Serving Nigeria, Kenya, UAE, Pakistan, Vietnam."/>
 <meta name="keywords" content="contact used milling machine China, buy milling machine China WhatsApp, milling machine inquiry China"/>
 <link rel="canonical" href="https://machlink.cn/contact.html"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        brand: { dark: '#0a1628', navy: '#0f2044', mid: '#1a3a6b', accent: '#e86c1e', light: '#f97316' },
-      },
-      fontFamily: {
-        heading: ['"Barlow Condensed"', 'sans-serif'],
-        body: ['"Inter"', 'sans-serif'],
-      }
-    }
-  }
-}
-</script>
+<link rel="stylesheet" href="dist/tailwind.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
   body { background:#0a1628; color:#e2e8f0; font-family:'Inter',sans-serif; }
@@ -39,6 +28,18 @@ tailwind.config = {
   .revealed { opacity:1; transform:none; }
   #formSuccess { display:none; }
 </style>
+<!-- Open Graph / Twitter -->
+<meta property="og:title" content="Contact MachLink China | Buy Used Milling Machine from China"/>
+<meta property="og:description" content="Contact MachLink China to buy used milling machines. WhatsApp, email, or contact form. We reply within 24 hours. Serving Nigeria, Kenya, UAE, Pakistan, Vietnam."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://machlink.cn/contact.html"/>
+<meta property="og:image" content="https://machlink.cn/images/og/og-default.jpg"/>
+<meta property="og:image:alt" content="Contact MachLink China | Buy Used Milling Machine from China"/>
+<meta property="og:site_name" content="MachLink China"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Contact MachLink China | Buy Used Milling Machine from China"/>
+<meta name="twitter:description" content="Contact MachLink China to buy used milling machines. WhatsApp, email, or contact form. We reply within 24 hours. Serving Nigeria, Kenya, UAE, Pakistan, Vietnam."/>
+<meta name="twitter:image" content="https://machlink.cn/images/og/og-default.jpg"/>
 </head>
 <body class="font-body">
 
@@ -49,7 +50,7 @@ tailwind.config = {
       <div class="w-8 h-8 bg-brand-accent rounded flex items-center justify-center">
         <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
       </div>
-      <span class="font-heading font-800 text-xl text-white tracking-wide">MACHLINK <span class="text-brand-accent">CHINA</span></span>
+      <span class="font-heading font-extrabold text-xl text-white tracking-wide">MACHLINK <span class="text-brand-accent">CHINA</span></span>
     </a>
     <div class="hidden md:flex items-center gap-7">
       <a href="index.html" class="nav-link text-sm font-medium">Home</a>
@@ -147,7 +148,7 @@ tailwind.config = {
           <p class="text-sm text-green-100">Your message is ready. Complete it in WhatsApp.</p>
         </div>
 
-        <div id="contactForm" class="space-y-4">
+        <form id="contactForm" class="space-y-4" onsubmit="submitContactForm(event)">
           <div>
             <label class="block text-slate-400 text-xs font-medium mb-1 uppercase tracking-wide">Your Name *</label>
             <input type="text" name="name" placeholder="e.g. Mohammed Al-Rashid" class="form-input" required/>
@@ -191,11 +192,11 @@ tailwind.config = {
             <label class="block text-slate-400 text-xs font-medium mb-1 uppercase tracking-wide">Your Message *</label>
             <textarea name="message" rows="4" placeholder="Tell us: machine model, year, budget, quantity, any specific requirements..." class="form-input resize-none" required></textarea>
           </div>
-          <button type="button" onclick="submitContactForm()" class="orange-btn w-full py-4 rounded-xl text-lg">
+          <button type="submit" class="orange-btn w-full py-4 rounded-xl text-lg">
             📲 Get Video + Price on WhatsApp
           </button>
           <p class="text-xs text-slate-500 text-center">Clicking above opens WhatsApp with your message pre-filled.</p>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -251,7 +252,7 @@ tailwind.config = {
       </div>
     </div>
     <div class="border-t border-brand-mid pt-6 text-center text-xs text-slate-500">
-      <p>© 2024 MachLink China · Used milling machine for sale · Second hand milling machine China</p>
+      <p>© 2026 MachLink China · Used milling machine for sale · Second hand milling machine China</p>
     </div>
   </div>
 </footer>
@@ -264,7 +265,8 @@ tailwind.config = {
 
 <script src="script.js"></script>
 <script>
-function submitContactForm() {
+function submitContactForm(event) {
+  if (event) event.preventDefault();
   const name = document.querySelector('[name="name"]')?.value?.trim() || '';
   const country = document.querySelector('[name="country"]')?.value || '';
   const machineType = document.querySelector('[name="machineType"]')?.value || '';

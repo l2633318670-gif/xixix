@@ -24,34 +24,6 @@ function initMobileMenu() {
   }
 }
 
-// ---- Product Filter ----
-function initProductFilter() {
-  const filterBtns = document.querySelectorAll('[data-filter]');
-  const cards = document.querySelectorAll('[data-category]');
-  if (!filterBtns.length) return;
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => {
-        b.classList.remove('bg-orange-500', 'text-white');
-        b.classList.add('bg-slate-700', 'text-slate-300');
-      });
-      btn.classList.add('bg-orange-500', 'text-white');
-      btn.classList.remove('bg-slate-700', 'text-slate-300');
-
-      const filter = btn.getAttribute('data-filter');
-      cards.forEach(card => {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = '';
-          card.classList.add('fade-in');
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
 // ---- Image Gallery ----
 function initGallery() {
   const mainImg = document.getElementById('mainImage');
@@ -90,19 +62,6 @@ function initFAQ() {
   });
 }
 
-// ---- Contact Form ----
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  if (!form) return;
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = form.querySelector('[name="name"]')?.value || '';
-    const msg = form.querySelector('[name="message"]')?.value || '';
-    const waText = encodeURIComponent(`Hi MachLink China,\nMy name is ${name}.\n${msg}`);
-    window.open(`https://wa.me/8615015320471?text=${waText}`, '_blank');
-  });
-}
-
 // ---- Scroll reveal ----
 function initScrollReveal() {
   const els = document.querySelectorAll('.reveal');
@@ -131,10 +90,8 @@ function initWAFloat() {
 // ---- Init all ----
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
-  initProductFilter();
   initGallery();
   initFAQ();
-  initContactForm();
   initScrollReveal();
   initWAFloat();
 });
