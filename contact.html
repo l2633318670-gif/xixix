@@ -289,6 +289,7 @@ ${message}
 Please send me price and video. Thank you.`;
 
   document.getElementById('formSuccess').style.display = 'block';
+  if (window.trackLead) { window.trackLead({ country: country, machine_type: machineType }); }
   window.open(`https://wa.me/8615015320471?text=${encodeURIComponent(waText)}`, '_blank');
 }
 </script>
